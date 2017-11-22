@@ -1,12 +1,12 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>groupId</groupId>
-  <artifactId>artifactId</artifactId>
-  <version>version</version>
+  <artifactId>ownproject</artifactId>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>ant.project.name</name>
-  <description>description</description>
+  <name>Own Project</name>
+  <description>Own Project</description>
   <url>project.url</url>
 
   <licenses>
@@ -16,6 +16,30 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <java.version>1.8</java.version>
+  </properties>
+  
+  <build>
+    <plugins>
+      <plugin>
+			  <artifactId>maven-assembly-plugin</artifactId>
+			  <!--<version>3.1.0</version>-->
+			  <configuration>
+		  		<descriptorRefs>
+		  		    <descriptorRef>jar-with-dependencies</descriptorRef>
+	  			</descriptorRefs>
+	  			<archive>
+		  		  <manifest>
+		  		    <mainClass>src.sample.java.project.SampleJavaProject</mainClass>
+	  			  </manifest>
+	  			</archive>
+	  		</configuration>
+  		</plugin>
+    </plugins>
+  </build>
 
   <scm>
     <connection>
