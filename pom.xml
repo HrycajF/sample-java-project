@@ -1,13 +1,13 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>@groupId@</groupId>
-  <artifactId>@artifactId@</artifactId>
-  <version>@version@</version>
+  <groupId>groupId</groupId>
+  <artifactId>artifactId</artifactId>
+  <version>version</version>
   <packaging>jar</packaging>
 
-  <name>@ant.project.name@</name>
-  <description>@description@</description>
-  <url>@project.url@</url>
+  <name>ant.project.name</name>
+  <description>description</description>
+  <url>project.url</url>
 
   <licenses>
     <license>
@@ -19,9 +19,9 @@
 
   <scm>
     <connection>
-      scm:git:@project.repo.url@
+      scm:git:project.repo.url
     </connection>
-    <url>@project.scm.url@</url>
+    <url>project.scm.url</url>
   </scm>
 
   <developers>
