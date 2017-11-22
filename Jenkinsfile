@@ -30,5 +30,17 @@ pipeline {
                                     ]
                            }
                   }
+                  stage('Reports') {                         
+                           steps {
+                                    echo 'Reporting: Findbugs & Checkstyle...'
+                                    sh 'cd Tomcat && mvn findbugs:findbugs checkstyle:checkstyle -Dcheckstyle.config.location="${WORKSPACE}/Tomcat/checkstyle.xml"'
+                                    
+                                    // Publish Checkstyle
+                                    step([$class: 'hudson.plugins.checkstyle.CheckStylePublisher', pattern: 'Tomcat/target/checkstyle-result.xml', unstableTotalAll:'80000'])
+                                    
+                                    // Publish FindBugs
+                                    step([$class: 'FindBugsPublisher', pattern: 'Tomcat/target/findbugsXml.xml', unstableTotalAll:'2000'])
+                           }
+                  }
         }
 }
