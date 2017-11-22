@@ -7,8 +7,8 @@ pipeline {
                   stage('Build') {                         
                            steps {
                                     echo 'Building...'
-                                    sh 'cd sample-java-project && mvn clean compile assembly:single'
-                                    archiveArtifacts 'sample-java-project/target/sample-java-project-jar-with-dependencies.jar'
+                                    sh 'cd ./sample-java-project && mvn clean compile assembly:single'
+                                    archiveArtifacts './sample-java-project/target/sample-java-project-jar-with-dependencies.jar'
                            }
                   }
                   stage('Test') {                         
