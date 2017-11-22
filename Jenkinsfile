@@ -8,7 +8,7 @@ pipeline {
                            steps {
                                     echo 'Building...'
                                     sh 'mvn clean compile assembly:single'
-                                    archiveArtifacts 'target/sample-java-project-jar-with-dependencies.jar'
+                                    archiveArtifacts 'target/ownproject-1.0.0-jar-with-dependencies.jar'
                            }
                   }
                   stage('Test') {                         
