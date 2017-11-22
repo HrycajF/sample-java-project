@@ -33,7 +33,7 @@
 	  </descriptorRefs>
 	  <archive>
    	    <manifest>
-	      <mainClass>src.sample.java.project.SampleJavaProject</mainClass>
+	      <mainClass>src.main.resources.SampleJavaProject</mainClass>
 	    </manifest>
 	  </archive>
 	</configuration>
